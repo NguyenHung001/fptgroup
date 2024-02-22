@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News FPT</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/variable.css">
+    <style>
+        header {
+        position: relative;
+        margin-top: 0;
+    }
+    header .header__menu ul li:first-of-type>a {
+        color: white;
+    }
+    header .header__menu ul li:first-of-type>a:hover {
+        color: var(--main-color);
+    }
+    header .header__menu ul li:nth-child(4)>a {
+        color: var(--main-color);
+    }
+    h1 {
+        text-align: center;
+        margin-top: 50px;
+        font-weight: bold;
+    }
+    .search {
+        margin: 50px 0;
+    }
+    input {
+        padding: 10px;
+        width: 500px;
+        margin-left: 20px;
+    }
+    .news__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 20px;
+        margin: 30px 0;
+    }
+    .news__img img {
+        width: 100%;
+    }
+    .news__item .news__date {
+        color: #7e8284;
+        display: flex;
+    }
+    .news__item .news__date p {
+        margin-right: 5px;
+    }
+    .news__title {
+        margin: 20px 0;
+    }
+    .news__title p a{
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .news__title p a:hover{
+        color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div id="news">
+        <header>
+            <div class="header__content box-content">
+              <div class="header__logo">
+                <img src="./assets/images/FPT_logo_2010.svg.png" alt="LOGO" />
+                <div class="header__text">
+                  <p>Corp Vision</p>
+                  <p>Vision to your Future</p>
+                </div>
+              </div>
+              <div class="header__menu">
+                <ul>
+                  <li><a href="index.html">Trang chủ</a></li>
+                  <li><a href="./ecosystem.html">Hệ sinh thái FPT</a></li>
+                  <li><a href="./investors.html">Nhà đầu tư</a></li>
+                  <li><a href="./news.html">Tin tức</a></li>
+                  <li><a href="./job.html">Cơ hội nghề nghiệp</a></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+        <div class="box-content">
+            <h1>TIN TỨC</h1>
+            <div class="search">
+                <input type="search" placeholder="Tìm kiếm">
+            </div>
+            <div class="news__content">
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin1.jpg" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">Thứ trưởng Bộ Ngoại giao: Ấn tượng, tự hào và tin tưởng FPT</a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Thông tin báo chí  |</p>
+                        <p>22/02/2024</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin10.webp" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">FPT ký thỏa thuận hợp tác chuyển đổi số với Tuyên Quang</a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Tin FPT  |</p>
+                        <p>25/01/2024</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin2.jpg" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">Chủ tịch UBND Thành phố Hà Nội: FPT đã hiện thực hóa được khát vọng xuất khẩ</a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Thông tin báo chí  |</p>
+                        <p>16/02/2024</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin3.jpg" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">Thứ trưởng Bộ Ngoại giao: Ấn tượng, tự hào và tin tưởng FPT</a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Thông tin báo chí  |</p>
+                        <p>22/02/2024</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin4.png" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">Việt Nam có chương trình đào tạo Thiết Kế Vi Mạch Bán Dẫn chuẩn quốc tế</a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Thông tin báo chí  |</p>
+                        <p>22/02/2024</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin5.jpg" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">Chủ tịch HĐQT FPT trực tiếp chỉ đạo Ủy Ban Phát triển Công nghiệp Chip Bán dẫn</a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Thông tin báo chí  |</p>
+                        <p>22/02/2024</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin6.webp" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">FPT và Konica Minolta thành lập liên doanh phần mềm trong lĩnh vực in ấn</a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Thông tin báo chí  |</p>
+                        <p>22/02/2024</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin9.jpeg" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">FPT mở chuyên ngành đại học về công nghệ ôtô số</a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Thông tin báo chí  |</p>
+                        <p>22/02/2024</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="news__img">
+                        <img src="./assets/images/tin8.webp" alt="">
+                    </div>
+                    <div class="news__title">
+                        <p><a href="#">Năm 2023, doanh thu và lợi nhuận FPT tăng trưởng 19,6% và 20,1%  </a></p>
+                    </div>
+                    <div class="news__date">
+                        <p>Thông tin báo chí  |</p>
+                        <p>22/02/2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

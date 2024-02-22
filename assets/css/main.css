@@ -239,6 +239,7 @@ header .header__menu ul li:first-of-type>a{
     margin: 20px;
     overflow: hidden;
     display: block;
+    border-radius: 5px;
 }
 .product__item:hover img {
     transform: scale(1.05);

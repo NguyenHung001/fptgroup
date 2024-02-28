@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investors FPT</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/variable.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nhà đầu tư FPT</title>
+    <link rel="shortcut icon" href="./assets/images/FPT_logo_2010.svg.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/variable.css" />
     <style>
-    header {
+      header {
         position: relative;
         margin-top: 0;
-    }
-    header .header__menu ul li:first-of-type>a {
+      }
+      header .header__menu ul li:first-of-type > a {
         color: white;
-    }
-    header .header__menu ul li:first-of-type>a:hover {
+      }
+      header .header__menu ul li:first-of-type > a:hover {
         color: var(--main-color);
-    }
-    header .header__menu ul li:nth-child(3)>a {
+      }
+      header .header__menu ul li:nth-child(3) > a {
         color: var(--main-color);
-    }
-    h1 {
+      }
+      header .header__menu ul li:nth-child(3) > a::before {
+        width: 100%;
+      }
+      header .header__menu ul li:first-of-type > a::before {
+        width: 0;
+      }
+      header .header__menu ul li a:hover::before {
+        width: 100%;
+      }
+      .ecosystem__dropdown,
+      .investors__dropdown {
+        background-color: aliceblue;
+      }
+      header .header__menu ul .ecosystem__dropdown a,
+      header .header__menu ul .investors__dropdown a {
+        color: black;
+      }
+      h1 {
         text-align: center;
         margin: 50px;
         font-weight: bold;
-    }
-    .investors__content {
+      }
+      .investors__content {
         display: flex;
-    }
-    .investors__item {
+      }
+      .investors__item {
         flex: 1;
         height: 600px;
         border-radius: 40px;
@@ -38,78 +56,108 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-    .investors__item p {
+      }
+      .investors__item p {
         color: white;
-    }
-    .investors__item h4 {
+      }
+      .investors__item h4 {
         font-size: 35px;
         font-weight: bold;
         color: white;
         margin-bottom: 150px;
-    }
-    .investors__item:first-of-type {
+      }
+      .investors__item:first-of-type {
         background-color: #eb7b3a;
-    }
-    .investors__item:nth-child(2) {
+      }
+      .investors__item:nth-child(2) {
         background-color: #1169b0;
-    }
-    .investors__item:last-child {
+      }
+      .investors__item:last-child {
         background-color: #fddab0;
-    }
-    .investors__item img {
+      }
+      .investors__item img {
         width: 150px;
-    }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="investors">
-        <header>
-            <div class="header__content box-content">
-              <div class="header__logo">
-                <img src="./assets/images/FPT_logo_2010.svg.png" alt="LOGO" />
-                <div class="header__text">
-                  <p>Corp Vision</p>
-                  <p>Vision to your Future</p>
-                </div>
-              </div>
-              <div class="header__menu">
-                <ul>
-                  <li><a href="index.html">Trang chủ</a></li>
-                  <li><a href="./ecosystem.html">Hệ sinh thái FPT</a></li>
-                  <li><a href="./investors.html">Nhà đầu tư</a></li>
-                  <li><a href="./news.html">Tin tức</a></li>
-                  <li><a href="./job.html">Cơ hội nghề nghiệp</a></li>
-                </ul>
-              </div>
+      <header>
+        <div class="header__content box-content">
+          <div class="header__logo">
+            <img src="./assets/images/FPT_logo_2010.svg.png" alt="LOGO" />
+            <div class="header__text">
+              <p>FPT Group</p>
+              <p>Vision to your Future</p>
             </div>
-          </header>
-        <div class="box-content">
-            <h1>NHÀ ĐẦU TƯ</h1>
-            <div class="investors__content">
-                <div class="investors__item">
-                    <p>KẾT QUẢ KINH DOANH THEO QUÝ</p>
-                    <h4>Kết quả kinh doanh 9 tháng năm 2023</h4>
-                    <img src="./assets/images/bieudo.png" alt="">
-                    <p>BẢN PDF
-                    </p>
+          </div>
+          <div class="header__menu">
+            <ul>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li>
+                <a href="./ecosystem.html">Hệ sinh thái FPT</a>
+                <div class="ecosystem__dropdown">
+                  <a
+                    href="https://fpt.com/vi/he-sinh-thai-fpt/cong-nghe"
+                    target="_blank"
+                    >Công nghệ</a
+                  >
+                  <a
+                    href="https://fpt.com/vi/he-sinh-thai-fpt/vien-thong"
+                    target="_blank"
+                    >Viễn thông</a
+                  >
+                  <a
+                    href="https://fpt.com/vi/he-sinh-thai-fpt/giao-duc"
+                    target="_blank"
+                    >Giáo dục</a
+                  >
+                  <a
+                    href="https://fpt.com/vi/he-sinh-thai-fpt/cong-ty-thanh-vien"
+                    target="_blank"
+                    >Công ty thành viên</a
+                  >
                 </div>
-                <div class="investors__item">
-                    <p>KẾT QUẢ KINH DOANH THEO QUÝ</p>
-                    <h4>Kết quả kinh doanh 9 tháng năm 2023</h4>
-                    <img src="./assets/images/folder.png" alt="">
-                    <p>BẢN PDF
-                    </p>
+              </li>
+              <li>
+                <a href="./investors.html">Nhà đầu tư</a>
+                <div class="investors__dropdown">
+                  <a href="">Đại hội đồng cổ đông</a>
+                  <a href="">Công bố thông tin</a>
+                  <a href="">Báo cáo</a>
+                  <a href="">Thông tin cổ phiếu</a>
+                  <a href="">Quản trị công ty</a>
                 </div>
-                <div class="investors__item">
-                    <p>KẾT QUẢ KINH DOANH THEO QUÝ</p>
-                    <h4>Kết quả kinh doanh 9 tháng năm 2023</h4>
-                    <img src="./assets/images/people.png" alt="">
-                    <p>BẢN PDF
-                    </p>
-                </div>
-            </div>
+              </li>
+              <li><a href="./news.html">Tin tức</a></li>
+              <li><a href="./job.html">Cơ hội nghề nghiệp</a></li>
+            </ul>
+          </div>
         </div>
+      </header>
+      <div class="box-content">
+        <h1>NHÀ ĐẦU TƯ</h1>
+        <div class="investors__content">
+          <div class="investors__item">
+            <p>KẾT QUẢ KINH DOANH THEO QUÝ</p>
+            <h4>Kết quả kinh doanh 9 tháng năm 2023</h4>
+            <img src="./assets/images/bieudo.png" alt="" />
+            <p>BẢN PDF</p>
+          </div>
+          <div class="investors__item">
+            <p>KẾT QUẢ KINH DOANH THEO QUÝ</p>
+            <h4>Kết quả kinh doanh 9 tháng năm 2023</h4>
+            <img src="./assets/images/folder.png" alt="" />
+            <p>BẢN PDF</p>
+          </div>
+          <div class="investors__item">
+            <p>KẾT QUẢ KINH DOANH THEO QUÝ</p>
+            <h4>Kết quả kinh doanh 9 tháng năm 2023</h4>
+            <img src="./assets/images/people.png" alt="" />
+            <p>BẢN PDF</p>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

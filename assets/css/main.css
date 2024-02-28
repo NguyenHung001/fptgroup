@@ -82,21 +82,78 @@ header .header__logo  .header__text p:last-of-type {
 }
 header .header__menu ul {
     display: flex;
-}header .header__menu ul li {
+}
+header .header__menu ul li {
     padding: 10px 15px;
     margin: 0 10px;
 }
-header .header__menu ul li a {
+header .header__menu ul li > a {
     color: var(--text-color);
     font-size: 26px;
     font-weight: 700;
     transition: .3s ease-in-out;
+    position: relative;
 }
-header .header__menu ul li a:hover {
+header .header__menu ul li > a::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+    bottom: -5px;
+    left: 0;
+    transition: .2s ease-in-out;
+}
+header .header__menu ul li > a:hover::before {
+    width: 100%;
+}
+header .header__menu ul li > a:hover {
     color: var(--main-color);
 }
 header .header__menu ul li:first-of-type>a{
     color: var(--main-color);
+}
+header .header__menu ul li:first-of-type>a::before {
+    width: 100%;
+}
+header .header__menu ul > li:nth-child(2),
+header .header__menu ul > li:nth-child(3) {
+    position: relative;
+}
+header .header__menu ul > li:nth-child(2):hover .ecosystem__dropdown,header .header__menu ul > li:nth-child(3):hover .investors__dropdown {
+    display: block;
+}
+.ecosystem__dropdown,
+.investors__dropdown {
+    background-color: var(--bg-color-light);
+    border-radius: 5px;
+    padding: 3px;
+    display: none;
+    position: absolute;
+    bottom: -360%;
+    left: 0;
+}
+.investors__dropdown {
+    bottom: -445%;
+}
+header .header__menu ul .ecosystem__dropdown a,
+header .header__menu ul .investors__dropdown a {
+    display: block;
+    padding: 10px 0;
+    padding-left: 10px;
+    padding-right: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #c2c2c2;
+}
+header .header__menu ul .investors__dropdown a {
+    width: 250px;
+}
+header .header__menu ul .ecosystem__dropdown a:hover,
+header .header__menu ul .investors__dropdown a:hover  {
+    background-color: var(--bg-color-night);
+    color: white;
 }
 /* -----ABOUT US----- */
 .about__us {
@@ -217,7 +274,7 @@ header .header__menu ul li:first-of-type>a{
     transition: .3s ease-in-out;
 }
 .service__item .ser__text a:hover {
-    color: #009f4d;
+    color: var(--main-color);
 }
 
 /* -----PRODUCTS----- */
@@ -366,6 +423,7 @@ footer li a {
     font-size: 19px;
 }
 footer li a:hover {
+    color: var(--main-color);
     opacity: 1;
 }
 .copy__right {
@@ -385,4 +443,63 @@ footer li a:hover {
     height: 25px;
     width: auto;
     margin-left: 40px;
+}
+.email {
+    background-image: url(../images/map.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.email__form {
+    width: 700px;
+    margin: 60px auto;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 9px;
+
+}
+footer .email .email__title h4 {
+    font-size: 50px;
+}
+.email__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.email__plane {
+    padding: 13px;
+    width: 60px;
+    height: 60px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.email__plane img {
+    color: white;
+    width: 100%;
+}
+.email__input {
+    flex: 1;
+    
+}
+.email__input input {
+    height: 60px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #13113f9f;
+    border: 0;
+    color: white;
+}
+.email__input input:focus-visible {
+    outline: none;
+}
+.email__login button{
+    color: white;
+    height: 60px;
+    font-size: 20px;
 }

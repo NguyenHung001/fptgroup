@@ -1,163 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hệ sinh thái FPT</title>
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/variable.css">
-</head>
-<style>
-    #ecosystem {
-        
-    }
+    <link rel="shortcut icon" href="./assets/images/FPT_logo_2010.svg.png" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/variable.css" />
+  </head>
+  <style>
     header {
-        position: relative;
-        margin-top: 0;
+      position: relative;
+      margin-top: 0;
     }
-    header .header__menu ul li:first-of-type>a {
-        color: white;
+    header .header__menu ul li:first-of-type > a {
+      color: white;
     }
-    header .header__menu ul li:first-of-type>a:hover {
-        color: var(--main-color);
+    header .header__menu ul li:first-of-type > a:hover {
+      color: var(--main-color);
     }
-    header .header__menu ul li:nth-child(2)>a {
-        color: var(--main-color);
+    header .header__menu ul li:nth-child(2) > a {
+      color: var(--main-color);
+    }
+    header .header__menu ul li:nth-child(2) > a::before {
+      width: 100%;
+    }
+    header .header__menu ul li:first-of-type > a::before {
+      width: 0;
+    }
+    header .header__menu ul li a:hover::before {
+      width: 100%;
+    }
+    .ecosystem__dropdown,
+    .investors__dropdown {
+      background-color: aliceblue;
+    }
+    header .header__menu ul .ecosystem__dropdown a,
+    header .header__menu ul .investors__dropdown a {
+      color: black;
     }
     h1 {
-        text-align: center;
-        font-weight: bold;
-        margin-bottom: 70px;
-        margin-top: 50px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 70px;
+      margin-top: 50px;
     }
     .ecosystem__title h3 {
-        color: var( --main-color);
-        font-size: 30px;
+      color: var(--main-color);
+      font-size: 30px;
     }
     .ecosystem__title p {
-        width: 70%;
-        font-size: 17px;
-        color: #0e1830;
-        margin: 20px 0;
+      width: 70%;
+      font-size: 17px;
+      color: #0e1830;
+      margin: 20px 0;
     }
     .ecosystem__content {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 50px;
     }
     .ecosystem__item:hover {
-        border: 1px solid rgb(63, 60, 60);
+      border: 1px solid rgb(63, 60, 60);
     }
     .ecosystem__item {
-        margin: 20px;
-        width: calc(50% - 40px);
-        display: flex;
-        padding: 10px;
-        transition: .3s ease-in-out;
-        border-radius: 50px;
-        border: 1px solid white;
+      margin: 20px;
+      width: calc(50% - 40px);
+      display: flex;
+      padding: 10px;
+      transition: 0.3s ease-in-out;
+      border-radius: 50px;
+      border: 1px solid white;
     }
-    .ecosystem__content .ecosystem__img{
-        width: 60%;
-        margin-right: 10px;
+    .ecosystem__content .ecosystem__img {
+      width: 60%;
+      margin-right: 10px;
     }
     .ecosystem__content .ecosystem__img img {
-        width: 100%;
-        border-radius: 40px;
+      width: 100%;
+      border-radius: 40px;
     }
     .ecosystem__content .ecosystem__text {
-        padding: 10px 0;
-        width: 40%;
-        margin-left: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        /* border-radius: 30px; */
+      padding: 10px 0;
+      width: 40%;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      /* border-radius: 30px; */
     }
     button {
-        width: 150px;
-        font-size: 16px;
+      width: 150px;
+      font-size: 16px;
     }
     .ecosystem__content .ecosystem__text h4 {
-        font-size: 24px;
+      font-size: 24px;
     }
     .ecosystem__content .ecosystem__text p {
-        font-size: 18px;
-        color: #0e1830;
+      font-size: 18px;
+      color: #0e1830;
     }
-</style>
-<body>
+  </style>
+  <body>
     <div id="ecosystem">
-        <header>
-            <div class="header__content box-content">
-              <div class="header__logo">
-                <img src="./assets/images/FPT_logo_2010.svg.png" alt="LOGO" />
-                <div class="header__text">
-                  <p>Corp Vision</p>
-                  <p>Vision to your Future</p>
-                </div>
-              </div>
-              <div class="header__menu">
-                <ul>
-                  <li><a href="index.html">Trang chủ</a></li>
-                  <li><a href="./ecosystem.html">Hệ sinh thái FPT</a></li>
-                  <li><a href="./investors.html">Nhà đầu tư</a></li>
-                  <li><a href="./news.html">Tin tức</a></li>
-                  <li><a href="./job.html">Cơ hội nghề nghiệp</a></li>
-                </ul>
-              </div>
+      <header>
+        <div class="header__content box-content">
+          <div class="header__logo">
+            <img src="./assets/images/FPT_logo_2010.svg.png" alt="LOGO" />
+            <div class="header__text">
+              <p>FPT Group</p>
+              <p>Vision to your Future</p>
             </div>
-          </header>
-        <div class="box-content">
-            <h1>HỆ SINH THÁI FPT</h1>
-            <div class="ecosystem__title">
-                <h3>Hệ sinh thái FPT</h3>
-                <p>FPT luôn khẳng định vị thế tiên phong trong các lĩnh vực Công nghệ, Viễn thông và Giáo dục. Đón đầu xu hướng công nghệ, thị trường, FPT tạo dựng Hệ sinh thái những dịch vụ, sản phẩm, giải pháp, nền tảng Made by FPT thúc đẩy sự phát triển, tăng trưởng bền vững của các tổ chức, doanh nghiệp cũng như mang đến những trải nghiệm mới, khác biệt cho người dùng.</p>
-            </div>
-            <div class="ecosystem__content">
-                <div class="ecosystem__item">
-                    <div class="ecosystem__img">
-                        <img src="./assets/images/ecosystem1.webp" alt="">
-                    </div>
-                    <div class="ecosystem__text">
-                        <h4>Công nghệ</h4>
-                        <p>FPT là đối tác chiến lược quan trọng về tư vấn, đào tạo, triển khai chuyển đổi số của các tập đoàn, tổ chức hàng đầu trên thế giới và tại Việt Nam trong nhiều lĩnh vực.</p>
-                        <button>Xem thêm</button>
-                    </div>
+          </div>
+          <div class="header__menu">
+            <ul>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li>
+                <a href="./ecosystem.html">Hệ sinh thái FPT</a>
+                <div class="ecosystem__dropdown">
+                  <a
+                    href="https://fpt.com/vi/he-sinh-thai-fpt/cong-nghe"
+                    target="_blank"
+                    >Công nghệ</a
+                  >
+                  <a
+                    href="https://fpt.com/vi/he-sinh-thai-fpt/vien-thong"
+                    target="_blank"
+                    >Viễn thông</a
+                  >
+                  <a
+                    href="https://fpt.com/vi/he-sinh-thai-fpt/giao-duc"
+                    target="_blank"
+                    >Giáo dục</a
+                  >
+                  <a
+                    href="https://fpt.com/vi/he-sinh-thai-fpt/cong-ty-thanh-vien"
+                    target="_blank"
+                    >Công ty thành viên</a
+                  >
                 </div>
-                <div class="ecosystem__item">
-                    <div class="ecosystem__img">
-                        <img src="./assets/images/ecosystem2.webp" alt="">
-                    </div>
-                    <div class="ecosystem__text">
-                        <h4>Viễn thông</h4>
-                        <p>FPT là đối tác chiến lược quan trọng về tư vấn, đào tạo, triển khai chuyển đổi số của các tập đoàn, tổ chức hàng đầu trên thế giới và tại Việt Nam trong nhiều lĩnh vực.</p>
-                        <button>Xem thêm</button>
-                    </div>
+              </li>
+              <li>
+                <a href="./investors.html">Nhà đầu tư</a>
+                <div class="investors__dropdown">
+                  <a href="">Đại hội đồng cổ đông</a>
+                  <a href="">Công bố thông tin</a>
+                  <a href="">Báo cáo</a>
+                  <a href="">Thông tin cổ phiếu</a>
+                  <a href="">Quản trị công ty</a>
                 </div>
-                <div class="ecosystem__item">
-                    <div class="ecosystem__img">
-                        <img src="./assets/images/ecosystem3.webp" alt="">
-                    </div>
-                    <div class="ecosystem__text">
-                        <h4>Giáo dục</h4>
-                        <p>FPT là đối tác chiến lược quan trọng về tư vấn, đào tạo, triển khai chuyển đổi số của các tập đoàn, tổ chức hàng đầu trên thế giới và tại Việt Nam trong nhiều lĩnh vực.</p>
-                        <button>Xem thêm</button>
-                    </div>
-                </div>
-                <div class="ecosystem__item">
-                    <div class="ecosystem__img">
-                        <img src="./assets/images/ecosystem.webp" alt="">
-                    </div>
-                    <div class="ecosystem__text">
-                        <h4>Công ty thành viên</h4>
-                        <p>FPT là đối tác chiến lược quan trọng về tư vấn, đào tạo, triển khai chuyển đổi số của các tập đoàn, tổ chức hàng đầu trên thế giới và tại Việt Nam trong nhiều lĩnh vực.</p>
-                        <button>Xem thêm</button>
-                    </div>
-                </div>
-            </div>
+              </li>
+              <li><a href="./news.html">Tin tức</a></li>
+              <li><a href="./job.html">Cơ hội nghề nghiệp</a></li>
+            </ul>
+          </div>
         </div>
+      </header>
+      <div class="box-content">
+        <h1>HỆ SINH THÁI FPT</h1>
+        <div class="ecosystem__title">
+          <h3>Hệ sinh thái FPT</h3>
+          <p>
+            FPT luôn khẳng định vị thế tiên phong trong các lĩnh vực Công nghệ,
+            Viễn thông và Giáo dục. Đón đầu xu hướng công nghệ, thị trường, FPT
+            tạo dựng Hệ sinh thái những dịch vụ, sản phẩm, giải pháp, nền tảng
+            Made by FPT thúc đẩy sự phát triển, tăng trưởng bền vững của các tổ
+            chức, doanh nghiệp cũng như mang đến những trải nghiệm mới, khác
+            biệt cho người dùng.
+          </p>
+        </div>
+        <div class="ecosystem__content">
+          <div class="ecosystem__item">
+            <div class="ecosystem__img">
+              <img src="./assets/images/ecosystem1.webp" alt="" />
+            </div>
+            <div class="ecosystem__text">
+              <h4>Công nghệ</h4>
+              <p>
+                FPT là đối tác chiến lược quan trọng về tư vấn, đào tạo, triển
+                khai chuyển đổi số của các tập đoàn, tổ chức hàng đầu trên thế
+                giới và tại Việt Nam trong nhiều lĩnh vực.
+              </p>
+              <button>Xem thêm</button>
+            </div>
+          </div>
+          <div class="ecosystem__item">
+            <div class="ecosystem__img">
+              <img src="./assets/images/ecosystem2.webp" alt="" />
+            </div>
+            <div class="ecosystem__text">
+              <h4>Viễn thông</h4>
+              <p>
+                FPT là đối tác chiến lược quan trọng về tư vấn, đào tạo, triển
+                khai chuyển đổi số của các tập đoàn, tổ chức hàng đầu trên thế
+                giới và tại Việt Nam trong nhiều lĩnh vực.
+              </p>
+              <button>Xem thêm</button>
+            </div>
+          </div>
+          <div class="ecosystem__item">
+            <div class="ecosystem__img">
+              <img src="./assets/images/ecosystem3.webp" alt="" />
+            </div>
+            <div class="ecosystem__text">
+              <h4>Giáo dục</h4>
+              <p>
+                FPT là đối tác chiến lược quan trọng về tư vấn, đào tạo, triển
+                khai chuyển đổi số của các tập đoàn, tổ chức hàng đầu trên thế
+                giới và tại Việt Nam trong nhiều lĩnh vực.
+              </p>
+              <button>Xem thêm</button>
+            </div>
+          </div>
+          <div class="ecosystem__item">
+            <div class="ecosystem__img">
+              <img src="./assets/images/ecosystem.webp" alt="" />
+            </div>
+            <div class="ecosystem__text">
+              <h4>Công ty thành viên</h4>
+              <p>
+                FPT là đối tác chiến lược quan trọng về tư vấn, đào tạo, triển
+                khai chuyển đổi số của các tập đoàn, tổ chức hàng đầu trên thế
+                giới và tại Việt Nam trong nhiều lĩnh vực.
+              </p>
+              <button>Xem thêm</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

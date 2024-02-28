@@ -17,12 +17,15 @@ li {
 button {
     padding: 15px 20px;
     background-color: var(--main-color);
-    color: white;
-    font-size: 18px;
     border-radius: 10px;
     transition: .2s ease-in-out;
     border: none;
 }
+button a {
+    color: white;
+    font-size: 18px;
+}
+
 button:hover {
     background-color: #fc71219a;
 }
